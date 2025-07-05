@@ -53,7 +53,7 @@ type StudentList = {
     email?:string,
     photo:string,
     phone?:string,
-    grade:string,
+    grade:number,
     class:string,
     address:string,
 
