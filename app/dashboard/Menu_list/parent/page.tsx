@@ -39,15 +39,11 @@ const col = [
 type parentsList = {
     id:number,
     name : string,
-    students:string,
+    students:string[],
     email?:string,
     phone?:string,
     address:string,
 }
-
-
-const ParentList = () => {
-
 
 const renderRow = (item: parentsList) => (
   <tr
@@ -66,7 +62,7 @@ const renderRow = (item: parentsList) => (
 
     {/* Responsive Columns */}
 
-    <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.students}</td>
+    <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.students.join(", ")}</td>
     <td className="hidden lg:table-cell px-4 py-2 text-gray-700">{item.phone}</td>
     <td className="hidden lg:table-cell px-4 py-2 text-gray-700">{item.address}</td>
 
@@ -102,6 +98,11 @@ const renderRow = (item: parentsList) => (
     </td>
   </tr>
 );
+
+
+const ParentList = () => {
+
+
 
 
     return (

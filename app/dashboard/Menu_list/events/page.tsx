@@ -4,7 +4,6 @@ import Table from "@/app/components/Table"
 import Tablesearch from "@/app/components/Tablsearch"
 import { eventsData,role } from "@/app/lib/data"
 import Image from "next/image"
-import Link from "next/link"
 
 const col = [
     // {
@@ -51,11 +50,6 @@ type EventList = {
     startTime: string,
     endTime :string,
 }   
-
-
-
-const  EventList  = () => {
-
 
 const renderRow = (item: EventList ) => (
   <tr
@@ -105,6 +99,8 @@ const renderRow = (item: EventList ) => (
   </tr>
 );
 
+const  EventList  = () => {
+
 
     return (
         <div className="bg-white">
@@ -137,4 +133,4 @@ const renderRow = (item: EventList ) => (
     )
 }
 
-export default   EventList 
+export default EventList 

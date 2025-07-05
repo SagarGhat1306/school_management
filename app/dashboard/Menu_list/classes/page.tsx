@@ -38,17 +38,13 @@ const col = [
 ]
 
 type ClassList = {
-    id:number,
-    name : string,
-    capacity: number,
-    grade: 1,
-    supervisor: "Joseph Padilla",
-}
+  id: number;
+  name: string;
+  capacity: number;
+  grade: number;
+  supervisor: string;
+};
  
-
-const classList = () => {
-
-
 const renderRow = (item: ClassList) => (
   <tr
     key={item.id}
@@ -96,6 +92,11 @@ const renderRow = (item: ClassList) => (
     </td>
   </tr>
 );
+
+const classList = () => {
+
+
+
 
 
     return (

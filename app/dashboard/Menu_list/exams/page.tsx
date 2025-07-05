@@ -52,9 +52,6 @@ type ExamsList = {
     date : string
 }
 
-const ExamsList = () => {
-
-
 const renderRow = (item:  ExamsList ) => (
   <tr
     key={item.id}
@@ -101,6 +98,9 @@ const renderRow = (item:  ExamsList ) => (
     </td>
   </tr>
 );
+
+
+const ExamsList = () => {
 
 
     return (

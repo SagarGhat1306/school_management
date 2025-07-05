@@ -65,39 +65,18 @@ type ResultList = {
     class: string,
     teacher: string,
     student:string,
-    type : "Exam" | "assignment",
-     date : string,
+    type : string,
+    date : string,
     score :number,
 }
 
-//     id: 1,
-//     subject: "Math",
-//     class: "1A",
-//     teacher: "John Doe",
-//     student: "John Doe",
-//     date: "2025-01-01",
-//     type: "exam",
-//     score: 90,
-//   },
-
-const  ResultList  = () => {
-
-
-const renderRow = (item:   ResultList  ) => (
+const renderRow = (item: ResultList) => (
   <tr
     key={item.id}
     className="border-b border-gray-200 text-sm hover:bg-lamaPurpleLight even:bg-gray-50"
   >
-    {/* Info Cell with image and name */}
-    {/* <td className="p-4">
-      <div className="flex items-center gap-4">
-        <div className="flex flex-col">
-          <span className="font-semibold text-gray-800">{item.subject}</span>
-        </div>
-      </div>
-    </td> */}
 
-    {/* Responsive Columns */}
+
      <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.id}</td>
     <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.subject}</td>
     <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.class}</td>
@@ -108,7 +87,7 @@ const renderRow = (item:   ResultList  ) => (
     <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.type}</td>
           <td className="hidden md:table-cell px-4 py-2 text-gray-700">{item.score}</td>
     
-    {/* Action Buttons */}
+
     <td className="px-4 py-2">
       <div className="flex items-center gap-2">
         {/* <Link href={`/list/teachers/${item.id}`}>
@@ -136,6 +115,11 @@ const renderRow = (item:   ResultList  ) => (
     </td>
   </tr>
 );
+
+const  ResultList  = () => {
+
+
+
 
 
     return (
@@ -165,4 +149,4 @@ const renderRow = (item:   ResultList  ) => (
     )
 }
 
-export default   ResultList 
+export default  ResultList 
